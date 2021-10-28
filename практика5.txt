@@ -1,0 +1,57 @@
+задание 1
+
+def spisok(first,n):
+    second=[]
+    for i in first:
+        if int(i)>n:
+            second.append(i)
+    return second
+x=input('Введите список ').split()
+n=int(input('введите число '))
+print(spisok(x,n))
+
+
+задание 3
+
+def inicialy(name):
+    shortname=''
+    for i in name:
+        if (i.isupper()):
+            shortname=shortname+i+'.'
+    return shortname
+n=input('введите Имя Отчество Фамилия ')
+print(inicialy(n))
+
+задание 5
+
+def consonant(w1):
+    a='aeiouyаеёиоуыюяэ'
+    acount=0
+    for i in w1:
+        if (i in a):
+            acount+=1
+    return acount
+def vowels(w2):
+    b='bcdfghjklmnpqrstvwxyzбвгджзйклмнпрстфхцчшщ'
+    bcount=0
+    for i in w2:
+        if (i in b):
+            bcount+=1
+    return bcount
+w=input('введите слово ')
+x=consonant(w)
+y=vowels(w)
+print('Количство гласных ', x,'Количество согласных ', y)
+
+задание 6
+
+def often(word):
+    k=0
+    letter=''
+    for i in word:
+        if (k<word.count(i)):
+            k=word.count(i)
+            letter=i
+    return letter
+w1=input('Введите слово ')  
+print('чаще всего встречается буква ',often(w1))
